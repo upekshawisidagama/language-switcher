@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project version="2.0.0a12" title="">
+  <file path="language-switcher.php" hash="1cc16b8f005776df29c787ec0f203798" package="UW">
+    <docblock line="4">
+      <description>Lang Switcher WordPress Plugin</description>
+      <long-description>&lt;p&gt;This php script is a 'WordPress Plugin' to change the WordPress Lang
+(WP_LANG) according to the visitors browser language. Find the WordPress
+specific plugin description below.&lt;/p&gt;
+
+&lt;p&gt;PHP versions 4 and 5&lt;/p&gt;
+
+&lt;p&gt;LICENSE: This source file is subject to version 3.01 of the PHP license
+that is available through the world-wide-web at the following URI:
+http://www.php.net/license/3_01.txt.  If you did not receive a copy of
+the PHP License and are unable to obtain it through the web, please
+send a note to license@php.net so we can mail you a copy immediately.&lt;/p&gt;</long-description>
+      <tag line="4" name="category" description="WordPressPlugin"/>
+      <tag line="4" name="package" description="UW"/>
+      <tag line="4" name="author" description="Upeksha Wisidagama &lt;developer@bapml.com&gt;"/>
+      <tag line="4" name="copyright" description="2012-2013 BaPML Lab"/>
+      <tag line="4" name="license" description="http://www.php.net/license/3_01.txt  PHP License 3.01"/>
+      <tag line="4" name="version" description="1.0&#10;WordPress Specific Plugin header, to be parsed by WordPress.&#10;Plugin Name: Language Switcher&#10;Plugin URI: http://upekshawisidagama.github.com/language-switcher&#10;Description: Changes WordPress Language to the Browser Language.&#10;Version: 1.0&#10;Author: Upeksha Wisidagama&#10;Author URI: http://upekshawisidagama.github.com/language-switcher"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="global" line="57" package="Default">
+      <extends/>
+      <name>Lang_Switcher</name>
+      <full_name>\Lang_Switcher</full_name>
+      <docblock line="42">
+        <description>Lang Switcher</description>
+        <long-description>&lt;p&gt;Switches WP_LANG according to the browser language.&lt;/p&gt;
+
+&lt;p&gt;A class to be instantiated as a global variable during WordPress plugin
+loading( Place this file in WP_PLUGIN_DIR ). Global variable, an instance
+of this class, hooks methods to change WordPress language to the visitors
+browser language during instantiation.&lt;/p&gt;</long-description>
+        <tag line="42" name="access" description="public"/>
+        <tag line="42" name="todo" description="Extra Features&#10; - manual change of language via select box or buttons.&#10; - admin bar dropdown box to change language."/>
+      </docblock>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="67" package="Default">
+        <name>__construct</name>
+        <full_name>__construct</full_name>
+        <docblock line="59">
+          <description>Construct the Language Switcher Object</description>
+          <long-description>&lt;p&gt;Hook, Filter and Return the desired locale
+according to the visiting browser.&lt;/p&gt;</long-description>
+          <tag line="59" name="filter" description="locale"/>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="82" package="Default">
+        <name>browser_language</name>
+        <full_name>browser_language</full_name>
+        <docblock line="71">
+          <description>Extract and return visitor's browser language</description>
+          <long-description>&lt;p&gt;Extract the visiting browser language with HTTP_ACCEPT_LANGUAGE
+server var. Use it's first two letters to identify the browser
+language. Return new language code.&lt;/p&gt;</long-description>
+          <tag line="71" name="global" description="$_SERVER"/>
+          <tag line="71" name="param" description="current locale of WordPress." type="string" variable="$locale">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="71" name="return" description="new locale" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="82">
+          <name>$locale</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+    </class>
+  </file>
+  <package name="Default" full_name="Default"/>
+  <package name="UW" full_name="UW"/>
+  <namespace name="global" full_name="global"/>
+  <marker count="1">todo</marker>
+  <marker count="0">fixme</marker>
+  <deprecated count="0"/>
+</project>
